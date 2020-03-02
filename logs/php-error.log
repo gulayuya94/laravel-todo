@@ -1,0 +1,9 @@
+[02-Mar-2020 12:22:28 Asia/Tokyo] PHP Warning:  require(/work/vendor/autoload.php): failed to open stream: No such file or directory in /work/artisan on line 18
+[02-Mar-2020 12:22:28 Asia/Tokyo] PHP Stack trace:
+[02-Mar-2020 12:22:28 Asia/Tokyo] PHP   1. {main}() /work/artisan:0
+[02-Mar-2020 12:53:47 Asia/Tokyo] Xdebug could not open the remote debug file '/tmp/xdebug.log'.
+[02-Mar-2020 03:53:49 UTC] Xdebug could not open the remote debug file '/tmp/xdebug.log'.
+[02-Mar-2020 03:53:49 UTC] Xdebug could not open the remote debug file '/tmp/xdebug.log'.
+[02-Mar-2020 12:54:42 Asia/Tokyo] Xdebug could not open the remote debug file '/tmp/xdebug.log'.
+[02-Mar-2020 03:54:43 UTC] Xdebug could not open the remote debug file '/tmp/xdebug.log'.
+[02-Mar-2020 03:54:43 UTC] Xdebug could not open the remote debug file '/tmp/xdebug.log'.

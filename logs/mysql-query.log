@@ -1,0 +1,99 @@
+/usr/sbin/mysqld, Version: 8.0.19 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2020-03-02T12:18:20.116065+09:00	    7 Connect	
+2020-03-02T12:18:20.116465+09:00	    7 Query	SELECT @@skip_networking, @@skip_name_resolve, @@have_ssl='YES', @@ssl_key, @@ssl_ca, @@ssl_capath, @@ssl_cert, @@ssl_cipher, @@ssl_crl, @@ssl_crlpath, @@tls_version
+2020-03-02T12:18:20.118938+09:00	    7 Quit	
+2020-03-02T12:32:15.014220+09:00	    8 Connect	homestead@172.18.0.6 on homestead using TCP/IP
+2020-03-02T12:32:15.041492+09:00	    8 Query	use `homestead`
+2020-03-02T12:32:15.047726+09:00	    8 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.048070+09:00	    8 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.048640+09:00	    8 Close stmt	
+2020-03-02T12:32:15.050626+09:00	    8 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2020-03-02T12:32:15.050932+09:00	    8 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2020-03-02T12:32:15.051682+09:00	    8 Close stmt	
+2020-03-02T12:32:15.072241+09:00	    8 Prepare	select * from information_schema.tables where table_schema = ? and table_name = ? and table_type = 'BASE TABLE'
+2020-03-02T12:32:15.076988+09:00	    8 Execute	select * from information_schema.tables where table_schema = 'homestead' and table_name = 'migrations' and table_type = 'BASE TABLE'
+2020-03-02T12:32:15.079341+09:00	    8 Close stmt	
+2020-03-02T12:32:15.095232+09:00	    8 Prepare	create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(255) not null, `batch` int not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.095523+09:00	    8 Execute	create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(255) not null, `batch` int not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.116975+09:00	    8 Close stmt	
+2020-03-02T12:32:15.135386+09:00	    8 Prepare	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:32:15.135809+09:00	    8 Execute	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:32:15.136382+09:00	    8 Close stmt	
+2020-03-02T12:32:15.146428+09:00	    8 Prepare	select max(`batch`) as aggregate from `migrations`
+2020-03-02T12:32:15.146755+09:00	    8 Execute	select max(`batch`) as aggregate from `migrations`
+2020-03-02T12:32:15.147359+09:00	    8 Close stmt	
+2020-03-02T12:32:15.162825+09:00	    8 Prepare	create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.163084+09:00	    8 Execute	create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.178593+09:00	    8 Close stmt	
+2020-03-02T12:32:15.179956+09:00	    8 Prepare	alter table `users` add unique `users_email_unique`(`email`)
+2020-03-02T12:32:15.180380+09:00	    8 Execute	alter table `users` add unique `users_email_unique`(`email`)
+2020-03-02T12:32:15.195588+09:00	    8 Close stmt	
+2020-03-02T12:32:15.200232+09:00	    8 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
+2020-03-02T12:32:15.200618+09:00	    8 Execute	insert into `migrations` (`migration`, `batch`) values ('2014_10_12_000000_create_users_table', 1)
+2020-03-02T12:32:15.204265+09:00	    8 Close stmt	
+2020-03-02T12:32:15.206400+09:00	    8 Prepare	create table `password_resets` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.206767+09:00	    8 Execute	create table `password_resets` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:32:15.221134+09:00	    8 Close stmt	
+2020-03-02T12:32:15.221808+09:00	    8 Prepare	alter table `password_resets` add index `password_resets_email_index`(`email`)
+2020-03-02T12:32:15.222161+09:00	    8 Execute	alter table `password_resets` add index `password_resets_email_index`(`email`)
+2020-03-02T12:32:15.236118+09:00	    8 Close stmt	
+2020-03-02T12:32:15.236747+09:00	    8 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
+2020-03-02T12:32:15.237030+09:00	    8 Execute	insert into `migrations` (`migration`, `batch`) values ('2014_10_12_100000_create_password_resets_table', 1)
+2020-03-02T12:32:15.240970+09:00	    8 Close stmt	
+2020-03-02T12:32:15.249452+09:00	    8 Quit	
+2020-03-02T12:52:32.726818+09:00	    9 Connect	homestead@172.18.0.6 on homestead using TCP/IP
+2020-03-02T12:52:32.727696+09:00	    9 Query	use `homestead`
+2020-03-02T12:52:32.728198+09:00	    9 Prepare	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.728444+09:00	    9 Execute	set names 'utf8mb4' collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.728889+09:00	    9 Close stmt	
+2020-03-02T12:52:32.729183+09:00	    9 Prepare	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2020-03-02T12:52:32.729360+09:00	    9 Execute	set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+2020-03-02T12:52:32.729769+09:00	    9 Close stmt	
+2020-03-02T12:52:32.730844+09:00	    9 Prepare	select * from information_schema.tables where table_schema = ? and table_name = ? and table_type = 'BASE TABLE'
+2020-03-02T12:52:32.735149+09:00	    9 Execute	select * from information_schema.tables where table_schema = 'homestead' and table_name = 'migrations' and table_type = 'BASE TABLE'
+2020-03-02T12:52:32.738726+09:00	    9 Close stmt	
+2020-03-02T12:52:32.749203+09:00	    9 Prepare	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:52:32.749477+09:00	    9 Execute	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:52:32.750294+09:00	    9 Close stmt	
+2020-03-02T12:52:32.779861+09:00	    9 Prepare	drop table if exists `password_resets`
+2020-03-02T12:52:32.780085+09:00	    9 Execute	drop table if exists `password_resets`
+2020-03-02T12:52:32.795509+09:00	    9 Close stmt	
+2020-03-02T12:52:32.799814+09:00	    9 Prepare	delete from `migrations` where `migration` = ?
+2020-03-02T12:52:32.800022+09:00	    9 Execute	delete from `migrations` where `migration` = '2014_10_12_100000_create_password_resets_table'
+2020-03-02T12:52:32.803053+09:00	    9 Close stmt	
+2020-03-02T12:52:32.803889+09:00	    9 Prepare	drop table if exists `users`
+2020-03-02T12:52:32.804213+09:00	    9 Execute	drop table if exists `users`
+2020-03-02T12:52:32.817998+09:00	    9 Close stmt	
+2020-03-02T12:52:32.818868+09:00	    9 Prepare	delete from `migrations` where `migration` = ?
+2020-03-02T12:52:32.819194+09:00	    9 Execute	delete from `migrations` where `migration` = '2014_10_12_000000_create_users_table'
+2020-03-02T12:52:32.822533+09:00	    9 Close stmt	
+2020-03-02T12:52:32.830129+09:00	    9 Prepare	select * from information_schema.tables where table_schema = ? and table_name = ? and table_type = 'BASE TABLE'
+2020-03-02T12:52:32.830455+09:00	    9 Execute	select * from information_schema.tables where table_schema = 'homestead' and table_name = 'migrations' and table_type = 'BASE TABLE'
+2020-03-02T12:52:32.831372+09:00	    9 Close stmt	
+2020-03-02T12:52:32.833958+09:00	    9 Prepare	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:52:32.834227+09:00	    9 Execute	select `migration` from `migrations` order by `batch` asc, `migration` asc
+2020-03-02T12:52:32.834936+09:00	    9 Close stmt	
+2020-03-02T12:52:32.835871+09:00	    9 Prepare	select max(`batch`) as aggregate from `migrations`
+2020-03-02T12:52:32.836101+09:00	    9 Execute	select max(`batch`) as aggregate from `migrations`
+2020-03-02T12:52:32.836557+09:00	    9 Close stmt	
+2020-03-02T12:52:32.843538+09:00	    9 Prepare	create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.843766+09:00	    9 Execute	create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `email_verified_at` timestamp null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.859688+09:00	    9 Close stmt	
+2020-03-02T12:52:32.860030+09:00	    9 Prepare	alter table `users` add unique `users_email_unique`(`email`)
+2020-03-02T12:52:32.860253+09:00	    9 Execute	alter table `users` add unique `users_email_unique`(`email`)
+2020-03-02T12:52:32.875429+09:00	    9 Close stmt	
+2020-03-02T12:52:32.876018+09:00	    9 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
+2020-03-02T12:52:32.876255+09:00	    9 Execute	insert into `migrations` (`migration`, `batch`) values ('2014_10_12_000000_create_users_table', 1)
+2020-03-02T12:52:32.878507+09:00	    9 Close stmt	
+2020-03-02T12:52:32.880623+09:00	    9 Prepare	create table `password_resets` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.880889+09:00	    9 Execute	create table `password_resets` (`email` varchar(255) not null, `token` varchar(255) not null, `created_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'
+2020-03-02T12:52:32.895644+09:00	    9 Close stmt	
+2020-03-02T12:52:32.895986+09:00	    9 Prepare	alter table `password_resets` add index `password_resets_email_index`(`email`)
+2020-03-02T12:52:32.896193+09:00	    9 Execute	alter table `password_resets` add index `password_resets_email_index`(`email`)
+2020-03-02T12:52:32.909931+09:00	    9 Close stmt	
+2020-03-02T12:52:32.910475+09:00	    9 Prepare	insert into `migrations` (`migration`, `batch`) values (?, ?)
+2020-03-02T12:52:32.910693+09:00	    9 Execute	insert into `migrations` (`migration`, `batch`) values ('2014_10_12_100000_create_password_resets_table', 1)
+2020-03-02T12:52:32.913332+09:00	    9 Close stmt	
+2020-03-02T12:52:32.924776+09:00	    9 Quit	
